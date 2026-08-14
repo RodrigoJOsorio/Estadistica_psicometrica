@@ -1,0 +1,192 @@
+{
+    "score_types": [
+        {
+            "id": "percentile",
+            "name": "Percentil",
+            "category": "percentile_rank",
+            "description": "Indica la posición relativa de una puntuación respecto a un grupo normativo.",
+            "scale": {
+                "min": 1,
+                "max": 99
+            },
+            "interpretation": {
+                "classifications": [
+                    {
+                        "min": 1,
+                        "max": 25,
+                        "label": "Bajo",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 26,
+                        "max": 74,
+                        "label": "Medio",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 75,
+                        "max": 99,
+                        "label": "Alto",
+                        "source": "apuntes"
+                    }
+                ],
+                "caveats": [
+                    "La interpretación depende del grupo normativo y del instrumento."
+                ]
+            },
+            "associated_tests": [
+                "Dominós",
+                "Raven",
+                "Gordon",
+                "DAT"
+            ],
+            "examples": [],
+            "notes": []
+        },
+        {
+            "id": "scaled_score",
+            "name": "Puntuación escalar",
+            "category": "scaled_score",
+            "description": "Puntuación transformada utilizada por determinados instrumentos psicométricos.",
+            "scale": {
+                "min": 1,
+                "max": 20
+            },
+            "interpretation": {
+                "classifications": [
+                    {
+                        "min": 1,
+                        "max": 7,
+                        "label": "Bajo",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 8,
+                        "max": 12,
+                        "label": "Medio",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 13,
+                        "max": 20,
+                        "label": "Alto",
+                        "source": "apuntes"
+                    }
+                ],
+                "caveats": [
+                    "Las propiedades de una puntuación escalar dependen del instrumento y de sus normas."
+                ]
+            },
+            "associated_tests": [
+                "Wechsler",
+                "Frostig"
+            ],
+            "examples": [],
+            "notes": []
+        },
+        {
+            "id": "composite_score",
+            "name": "Índice compuesto",
+            "category": "composite",
+            "description": "Puntuación derivada de uno o más resultados de un instrumento mediante procedimientos definidos por sus normas.",
+            "scale": {
+                "min": null,
+                "max": null
+            },
+            "interpretation": {
+                "classifications": [
+                    {
+                        "min": 90,
+                        "max": 109,
+                        "label": "Promedio",
+                        "source": "apuntes"
+                    }
+                ],
+                "caveats": [
+                    "Un índice compuesto no debe interpretarse como una simple suma de puntuaciones sin conocer el procedimiento específico del instrumento."
+                ]
+            },
+            "associated_tests": [
+                "Wechsler",
+                "Terman-Merrill",
+                "RIAS"
+            ],
+            "examples": [],
+            "notes": []
+        },
+        {
+            "id": "stanine",
+            "name": "Estanina",
+            "category": "standard_score",
+            "description": "Sistema de puntuación estandarizada utilizado para representar resultados en categorías discretas.",
+            "scale": {
+                "min": 1,
+                "max": 9
+            },
+            "interpretation": {
+                "classifications": [
+                    {
+                        "min": 1,
+                        "max": 3,
+                        "label": "Bajo",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 4,
+                        "max": 7,
+                        "label": "Promedio",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 8,
+                        "max": 9,
+                        "label": "Alto",
+                        "source": "apuntes"
+                    }
+                ],
+                "caveats": [
+                    "Debe distinguirse entre estaninas (1-9) y otras escalas estandarizadas de 10 categorías."
+                ]
+            },
+            "associated_tests": [
+                "16 PF"
+            ],
+            "examples": [],
+            "notes": []
+        },
+        {
+            "id": "t_score",
+            "name": "Puntuación T",
+            "category": "standard_score",
+            "description": "Puntuación estandarizada basada en una distribución con media 50 y desviación estándar 10.",
+            "scale": {
+                "min": null,
+                "max": null
+            },
+            "interpretation": {
+                "classifications": [
+                    {
+                        "min": 50,
+                        "max": 50,
+                        "label": "Media",
+                        "source": "apuntes"
+                    },
+                    {
+                        "min": 65,
+                        "max": null,
+                        "label": "Alta",
+                        "source": "apuntes"
+                    }
+                ],
+                "caveats": [
+                    "Los puntos de corte para interpretar una puntuación T dependen del instrumento, escala y propósito de evaluación."
+                ]
+            },
+            "associated_tests": [
+                "MMPI"
+            ],
+            "examples": [],
+            "notes": []
+        }
+    ]
+}
