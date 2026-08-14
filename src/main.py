@@ -10,14 +10,32 @@ def load_score_types():
 
     return data["score_types"]
 
+def find_score_type(score_types, score_type_id):
+    for score_type in score_types:
+        if score_type["id"] == score_type_id:
+            return score_type
+
+    return None
+
 def main():
+    """ 
     score_types = load_score_types()
 
-    print("Tipos de puntuación psicométrica:")
-    print()
+    print("Tipos de puntuación psicométrica: \n")
 
     for score_type in score_types:
-        print(f"- {score_type['name']}")
+        print(f"- {score_type['name']}") 
+        
+        """
+    
+    score_types = load_score_types()
+
+    score_type = find_score_type(score_types, "does_not_exist")
+
+    if score_type:
+        print(f"Encontrado: {score_type['name']}")
+    else:
+        print("Tipo de puntuación no encontrado")
 
 
 if __name__ == "__main__":
