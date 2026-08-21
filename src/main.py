@@ -17,26 +17,56 @@ def find_score_type(score_types, score_type_id):
 
     return None
 
+def show_score_types(score_types):
+    print("========================================")
+    print("       ESTADÍSTICA PSICOMÉTRICA")
+    print("========================================")
+    print()
+    print("Tipos de puntuación disponibles:")
+    print()
+
+    for number, score_type in enumerate(score_types, start=1):
+        print(f"{number}. {score_type['name']}")
+
+    print()
+    print("0. Salir")
+    print()
+
+def get_user_selection(score_types):
+    while True:
+        show_score_types(score_types)
+
+        option = input("Seleccione una opción: ")
+
+        try:
+            option = int(option)
+        except ValueError:
+            print()
+            print("Entrada no válida. Introduzca un número.")
+            print()
+            continue
+
+        if option == 0:
+            return None
+
+        if 1 <= option <= len(score_types):
+            return score_types[option - 1]
+
+        print()
+        print("Opción fuera de rango.")
+        print()
+
 def main():
-    """ 
     score_types = load_score_types()
 
-    print("Tipos de puntuación psicométrica: \n")
+    while True:
+        score_type = get_user_selection(score_types)
 
-    for score_type in score_types:
-        print(f"- {score_type['name']}") 
-        
-        """
-    
-    score_types = load_score_types()
+        if score_type is None:
+            print()
+            print("Hasta luego.")
+            break
 
-    score_type = find_score_type(score_types, "does_not_exist")
-
-    if score_type:
-        print(f"Encontrado: {score_type['name']}")
-    else:
-        print("Tipo de puntuación no encontrado")
-
-
-if __name__ == "__main__":
-    main()
+        print()
+        print(f"Seleccionaste: {score_type['name']}")
+        print()
