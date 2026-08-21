@@ -56,3 +56,21 @@ def show_score_type(score_type):
         print("Escala:")
         print(f"{scale['min']} - {scale['max']}")
         print()
+
+    show_classifications(score_type)
+
+def show_classifications(score_type):
+    interpretation = score_type.get("interpretation")
+
+    if not interpretation:
+        return
+
+    classifications = interpretation.get("classifications")
+
+    if not classifications:
+        return
+
+    print("Clasificaciones:")
+
+    for classification in classifications:
+        print(f"- {classification}")
