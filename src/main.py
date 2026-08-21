@@ -70,3 +70,6 @@ def main():
         print()
         print(f"Seleccionaste: {score_type['name']}")
         print()
+
+if __name__ == "__main__":
+    main()
