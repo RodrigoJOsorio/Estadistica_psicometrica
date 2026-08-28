@@ -59,6 +59,8 @@ def show_score_type(score_type):
 
     show_classifications(score_type)
 
+# Seleccion de propiedades para las clasificaciones 
+
 def show_classifications(score_type):
     interpretation = score_type.get("interpretation")
 
@@ -71,6 +73,18 @@ def show_classifications(score_type):
         return
 
     print("Clasificaciones:")
+    print()
 
     for classification in classifications:
-        print(f"- {classification}")
+        minimum = classification.get("min")
+        maximum = classification.get("max")
+        label = classification.get("label")
+
+        if maximum is None:
+            print(f"- {minimum} o más → {label}")
+        elif minimum == maximum:
+            print(f"- {minimum} → {label}")
+        else:
+            print(f"- {minimum} - {maximum} → {label}")
+
+    print()
